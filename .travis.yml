@@ -1,0 +1,20 @@
+# Header
+language: r
+sudo: false
+cache: packages
+r: devel
+
+#env
+env:
+  global:
+  - MAKEFLAGS="-j 2"
+
+# Custom parts:
+
+#script
+script:
+- true
+
+#r_packages
+r_packages:
+- dplyr
