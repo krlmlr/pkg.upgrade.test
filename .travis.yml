@@ -11,10 +11,10 @@ env:
 
 # Custom parts:
 
+#install
+install:
+- R -e 'install.packages("dplyr")'
+
 #script
 script:
 - true
-
-#r_packages
-r_packages:
-- dplyr
