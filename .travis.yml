@@ -13,8 +13,11 @@ env:
 
 #install
 install:
-- R -e 'install.packages("dplyr")'
+- R -e 'if (!requireNamespace("dplyr", quietly = TRUE)) install.packages("dplyr")'
 
 #script
 script:
-- true
+- R -e 'library(dplyr); sessionInfo()'
+- R -e 'install.packages("https://github.com/RcppCore/drat/raw/gh-pages/src/contrib/Rcpp_0.12.8.2.tar.gz", repos = NULL)'
+- R -e 'library(dplyr); sessionInfo()'
+
